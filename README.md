@@ -18,4 +18,4 @@ Sekali lagi Terima Kasih Atas Kesempatan dan Waktunya 🙏
 Dengan Hormat
 
 
-Ahmad Rizqi Pratama# BTS
+Ahmad Rizqi Pratama#
