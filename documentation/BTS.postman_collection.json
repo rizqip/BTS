@@ -1,0 +1,661 @@
+{
+	"info": {
+		"_postman_id": "85df8bc9-3fd3-4c43-9829-c08a20f9fa62",
+		"name": "BTS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14834312"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Register User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "Name",
+									"value": "user1",
+									"type": "text"
+								},
+								{
+									"key": "Email",
+									"value": "user1@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "Password",
+									"value": "user1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8090/api/v1/access/register",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"v1",
+								"access",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Register User [User]",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "Name",
+											"value": "user1",
+											"type": "text"
+										},
+										{
+											"key": "Email",
+											"value": "user1@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "Password",
+											"value": "user1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "localhost:8090/api/v1/access/register",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"v1",
+										"access",
+										"register"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 13 May 2023 03:30:11 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "225"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status_code\": 200,\n    \"message\": \"Create User Successfully\",\n    \"data\": {\n        \"CreatedAt\": \"2023-05-13 10:30:11\",\n        \"Email\": \"user1@gmail.com\",\n        \"Name\": \"user1\",\n        \"Password\": \"user1\",\n        \"Status\": 0,\n        \"Type\": 1,\n        \"UpdatedAt\": \"2023-05-13 10:30:11\",\n        \"UserId\": 1\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Login User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "Email",
+									"value": "user1@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "Password",
+									"value": "user1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8090/api/v1/access/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"v1",
+								"access",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Login User [user1]",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "Email",
+											"value": "user1@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "Password",
+											"value": "user1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "localhost:8090/api/v1/access/login",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"v1",
+										"access",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 13 May 2023 04:11:30 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "269"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status_code\": 200,\n    \"message\": \"Login Success\",\n    \"data\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6InVzZXIxQGdtYWlsLmNvbSIsIkV4cGlyZWQiOiIyMDIzLTA1LTEzIDEyOjExOjMwIiwiTmFtZSI6InVzZXIxIiwiVXNlcklkIjoxLCJVc2VyVHlwZXMiOjF9.NyoDup-jkZhhwRbYaALDSQ-mQjpDPdNLrwaMqkPYB7U\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Logout User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluMUBnbWFpbC5jb20iLCJFeHBpcmVkIjoiMjAyMy0wNS0xMyAxMTozMTozNiIsIk5hbWUiOiJhZG1pbjEiLCJVc2VySWQiOjIsIlVzZXJUeXBlcyI6Mn0.OdHX9lRyMrGaf3RzU-c_CXyBjEQFcB94RLiWua9wLc0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "localhost:8090/api/v1/access/logout",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"v1",
+								"access",
+								"logout"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Logout User [user1]",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluMUBnbWFpbC5jb20iLCJFeHBpcmVkIjoiMjAyMy0wNS0xMyAxMTozMTozNiIsIk5hbWUiOiJhZG1pbjEiLCJVc2VySWQiOjIsIlVzZXJUeXBlcyI6Mn0.OdHX9lRyMrGaf3RzU-c_CXyBjEQFcB94RLiWua9wLc0",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "localhost:8090/api/v1/access/logout",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"v1",
+										"access",
+										"logout"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 13 May 2023 03:33:14 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "60"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status_code\": 200,\n    \"message\": \"Log Out Success\",\n    \"data\": null\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Checklist",
+			"item": [
+				{
+					"name": "Create Checklist",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6InVzZXIxQGdtYWlsLmNvbSIsIkV4cGlyZWQiOiIyMDI0LTEyLTExIDE2OjMxOjAxIiwiTmFtZSI6InVzZXIxIiwiVXNlcklkIjoxfQ.uMtmFFf90kXYxiEfJQpgvBgub2bxpQcGQdJ91yFQgdo",
+								"description": "user1",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "Title",
+									"value": "Check 1",
+									"type": "text"
+								},
+								{
+									"key": "Description",
+									"value": "Deskripsi 1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8090/api/v1/checklist",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"v1",
+								"checklist"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Checklist",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6InVzZXIxQGdtYWlsLmNvbSIsIkV4cGlyZWQiOiIyMDI0LTEyLTExIDE2OjMxOjAxIiwiTmFtZSI6InVzZXIxIiwiVXNlcklkIjoxfQ.uMtmFFf90kXYxiEfJQpgvBgub2bxpQcGQdJ91yFQgdo",
+										"description": "user1",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "Title",
+											"value": "Check 1",
+											"type": "text"
+										},
+										{
+											"key": "Description",
+											"value": "Deskripsi 1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "localhost:8090/api/v1/checklist",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"v1",
+										"checklist"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "List Checklist",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6InVzZXIxQGdtYWlsLmNvbSIsIkV4cGlyZWQiOiIyMDI0LTEyLTExIDE2OjMxOjAxIiwiTmFtZSI6InVzZXIxIiwiVXNlcklkIjoxfQ.uMtmFFf90kXYxiEfJQpgvBgub2bxpQcGQdJ91yFQgdo",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8090/api/v1/checklist",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"v1",
+								"checklist"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "offset",
+									"value": "0",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "List Checklist",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluMUBnbWFpbC5jb20iLCJFeHBpcmVkIjoiMjAyMy0wNS0xMyAxMTozMjo0NiIsIk5hbWUiOiJhZG1pbjEiLCJVc2VySWQiOjIsIlVzZXJUeXBlcyI6Mn0.x1vsTYSeYMfn52qMQdrWElHk6_-Y9CbVv23HlRyGZZI",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:8090/api/v1/checklist",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"v1",
+										"checklist"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "2",
+											"disabled": true
+										},
+										{
+											"key": "offset",
+											"value": "0",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Detail Checklist",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluMUBnbWFpbC5jb20iLCJFeHBpcmVkIjoiMjAyMy0wNS0xMyAxMTozMjo0NiIsIk5hbWUiOiJhZG1pbjEiLCJVc2VySWQiOjIsIlVzZXJUeXBlcyI6Mn0.x1vsTYSeYMfn52qMQdrWElHk6_-Y9CbVv23HlRyGZZI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "localhost:8090/api/v1/checklist/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"v1",
+								"checklist",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Detail Checklist",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluMUBnbWFpbC5jb20iLCJFeHBpcmVkIjoiMjAyMy0wNS0xMyAxMTozMjo0NiIsIk5hbWUiOiJhZG1pbjEiLCJVc2VySWQiOjIsIlVzZXJUeXBlcyI6Mn0.x1vsTYSeYMfn52qMQdrWElHk6_-Y9CbVv23HlRyGZZI",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "localhost:8090/api/v1/checklist/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"v1",
+										"checklist",
+										"1"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Update Checklist",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluMUBnbWFpbC5jb20iLCJFeHBpcmVkIjoiMjAyMy0wNS0xMyAxMTozMTozNiIsIk5hbWUiOiJhZG1pbjEiLCJVc2VySWQiOjIsIlVzZXJUeXBlcyI6Mn0.OdHX9lRyMrGaf3RzU-c_CXyBjEQFcB94RLiWua9wLc0",
+								"description": "admin1",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6InVzZXIxQGdtYWlsLmNvbSIsIkV4cGlyZWQiOiIyMDIzLTA1LTEzIDEyOjExOjMwIiwiTmFtZSI6InVzZXIxIiwiVXNlcklkIjoxLCJVc2VyVHlwZXMiOjF9.NyoDup-jkZhhwRbYaALDSQ-mQjpDPdNLrwaMqkPYB7U",
+								"description": "user1",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "Title",
+									"value": "Check1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "Description",
+									"value": "Decs1",
+									"type": "text"
+								},
+								{
+									"key": "IsDeleted",
+									"value": "0",
+									"description": "1. True, 0. False",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8090/api/v1/checklist/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"v1",
+								"checklist",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Checklist",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6ImFkbWluMUBnbWFpbC5jb20iLCJFeHBpcmVkIjoiMjAyMy0wNS0xMyAxMTozMTozNiIsIk5hbWUiOiJhZG1pbjEiLCJVc2VySWQiOjIsIlVzZXJUeXBlcyI6Mn0.OdHX9lRyMrGaf3RzU-c_CXyBjEQFcB94RLiWua9wLc0",
+										"description": "admin1",
+										"type": "text",
+										"disabled": true
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6InVzZXIxQGdtYWlsLmNvbSIsIkV4cGlyZWQiOiIyMDIzLTA1LTEzIDEyOjExOjMwIiwiTmFtZSI6InVzZXIxIiwiVXNlcklkIjoxLCJVc2VyVHlwZXMiOjF9.NyoDup-jkZhhwRbYaALDSQ-mQjpDPdNLrwaMqkPYB7U",
+										"description": "user1",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "Title",
+											"value": "Check1",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "Description",
+											"value": "Deck1",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "IsDeleted",
+											"value": "0",
+											"description": "1. True, 0. False",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "localhost:8090/api/v1/checklist/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8090",
+									"path": [
+										"api",
+										"v1",
+										"checklist",
+										"1"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		}
+	]
+}
